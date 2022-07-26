@@ -3,7 +3,7 @@ using namespace std;
 
 #define MODE  1
 
-#ifndef MODE
+#if MODE!=1
 #error Директива MODE не найдена!
 #endif
 
@@ -16,7 +16,6 @@ void add() {
     cout << "Введите число 2: ";
     cin >> b;
     cout << "Результат сложения: " << a + b;
-     
 }
 
 int main()

@@ -7,25 +7,26 @@ using namespace std;
 #endif
 
 #if MODE==1
-void add() {
-    int a = 0;
-    int b = 0;            
-    cout << "Работаю в боевом режиме" << endl;
-    cout << "Введите число 1: ";
-    cin >> a;
-    cout << "Введите число 2: ";
-    cin >> b;
-    cout << "Результат сложения: " << a + b;
+int add(int a, int b) {
+               
+    return a + b;
 }
 #endif
 
 int main()
 {
     setlocale(LC_ALL, "rus");
+    int a = 0;
+    int b = 0;
 #if MODE==0
     cout << "Работаю в режиме тренировки";
 #elif MODE==1
-    add();
+    cout << "Работаю в боевом режиме" << endl;
+    cout << "Введите число 1: ";
+    cin >> a;
+    cout << "Введите число 2: ";
+    cin >> b;
+    cout << "Результат сложения: " << add(a,b);
 #else 
     cout << "Неизвестный режим. Завершение работы";
 #endif

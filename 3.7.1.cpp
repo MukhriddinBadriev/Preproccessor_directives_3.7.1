@@ -2,6 +2,11 @@
 using namespace std;
 #define MODE  1
 
+#ifndef MODE
+#error Директива MODE не найдена!
+#endif
+
+#if MODE==1
 void add() {
     int a = 0;
     int b = 0;            
@@ -12,11 +17,6 @@ void add() {
     cin >> b;
     cout << "Результат сложения: " << a + b;
 }
-
-#if MODE!=1
-#ifndef add
-#error Функция add не найдена!
-#endif 
 #endif
 
 int main()
